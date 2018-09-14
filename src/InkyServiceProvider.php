@@ -26,14 +26,14 @@ class BlinkyServiceProvider extends ServiceProvider
         $app = $this->app;
         $resolver = $app['view.engine.resolver'];
         
-        $app->singleton('inky.compiler', function ($app) {
+        $app->singleton('blinky.compiler', function ($app) {
             $cache = $app['config']['view.compiled'];
             
-            return new InkyCompiler($app['blade.compiler'], $app['files'], $cache);
+            return new BlnkyCompilerEngine($app['blade.compiler'], $app['files'], $cache);
         });
 
         $resolver->register('inky', function () use ($app) {
-            return new InkyCompilerEngine($app['inky.compiler'], $app['files']);
+            return new BlnkyCompilerEngine($app['blinky.compiler'], $app['files']);
         });
     }
     
