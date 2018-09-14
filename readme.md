@@ -1,6 +1,6 @@
 Package based on [Laravel Inky](https://github.com/petecoop/laravel-inky) created by [petecoop](https://github.com/petecoop)
 
-Sadly his Package isn't updated for about 1 year and can not installed on current Laravel Versions 5.5, 5.6 and 5.7.
+Sadly his Package was not updated for about 1 year and can not installed on current Laravel Versions 5.5, 5.6 and 5.7.
 
 Allows you to use Foundation's [Inky](http://foundation.zurb.com/emails/docs/inky.html) email templates nicely in Laravel.
 
