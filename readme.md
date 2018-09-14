@@ -81,6 +81,20 @@ The location of your `<link rel="stylesheet">` `href` is resolved to the `resour
 
 Here's a handy reference for CSS in emails: [CSS Support Guide for Email Clients](https://www.campaignmonitor.com/css/)
 
+*Ignore CSS inlining*
+
+Maybe you want to ignore the css inlining. 
+
+Just update add following settings to `config/views.php`:
+
+```php
+    'laravel_blinky' => [
+        'use_inliner' => false
+    ]
+```
+
+
+
 ## Licence
 
 [MIT Licence](LICENCE)
