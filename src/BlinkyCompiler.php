@@ -22,6 +22,7 @@ class BlinkyCompiler extends Compiler implements CompilerInterface
     
     public function compile($path = null)
     {
+
         if ($path) {
             $this->setPath($path);
         }
@@ -56,6 +57,21 @@ class BlinkyCompiler extends Compiler implements CompilerInterface
     public function getBlade()
     {
         return $this->blade;
+    }
+
+    public function getCompiledPath($path) {
+        return $this->cachePath.'/'.sha1($path).'.php';
+    }
+
+    public function isExpired($path) {
+        $compiled = $this->getCompiledPath($path);
+
+        if (! $this->files->exists($compiled)) {
+            return true;
+        }
+
+        return $this->files->lastModified($path) >=
+               $this->files->lastModified($compiled);
     }
 
 }
