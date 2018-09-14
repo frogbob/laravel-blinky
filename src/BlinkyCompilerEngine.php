@@ -28,29 +28,37 @@ class BlinkyCompilerEngine extends CompilerEngine
     {
         // dd($path)
         $results = parent::get($path, $data);
- 
-        $crawler = new Crawler();
-        $crawler->addHtmlContent($results);
         
-        $stylesheets = $crawler->filter('link[rel=stylesheet]');
-        // collect hrefs
-        $stylesheetsHrefs = collect($stylesheets->extract('href'));
-        // remove links
-        $stylesheets->each(function (Crawler $crawler) {;
-            foreach ($crawler as $node) {
-                $node->parentNode->removeChild($node);
-            }
-        });
-        $results = $crawler->html();
-        // get the styles
-        $files = $this->files;
-        $styles = $stylesheetsHrefs->map(function ($stylesheet) use ($files) {
-            $path = resource_path('assets/css/' . $stylesheet);
-            return $files->get($path);
-        })->implode("\n\n");
-        $inliner = new CssToInlineStyles();
+        $useInliner = config('view.laravel_blinky.use_inliner');
 
-        return $inliner->convert($results, $styles);
+        if($useInliner || is_null($useInliner)) {
+
+            $crawler = new Crawler();
+            $crawler->addHtmlContent($results);
+            
+            $stylesheets = $crawler->filter('link[rel=stylesheet]');
+            // collect hrefs
+            $stylesheetsHrefs = collect($stylesheets->extract('href'));
+            // remove links
+            $stylesheets->each(function (Crawler $crawler) {;
+                foreach ($crawler as $node) {
+                    $node->parentNode->removeChild($node);
+                }
+            });
+            $results = $crawler->html();
+            // get the styles
+            $files = $this->files;
+            $styles = $stylesheetsHrefs->map(function ($stylesheet) use ($files) {
+                $path = resource_path('assets/css/' . $stylesheet);
+                return $files->get($path);
+            })->implode("\n\n");
+            $inliner = new CssToInlineStyles();
+
+            return $inliner->convert($results, $styles);
+
+        }
+
+        return $results;
     }
     
     public function getFiles()
