@@ -81,7 +81,7 @@ The location of your `<link rel="stylesheet">` `href` is resolved to the `resour
 
 Here's a handy reference for CSS in emails: [CSS Support Guide for Email Clients](https://www.campaignmonitor.com/css/)
 
-_Ignore CSS inlining_
+**Ignore CSS inlining**
 
 Maybe you want to ignore the css inlining. 
 
