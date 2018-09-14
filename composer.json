@@ -11,10 +11,10 @@
     ],
     "require": {
         "hampe/inky": "^1.3.6.2",
-        "illuminate/support": "~5.*",
-        "illuminate/view": "~5.*",
-        "symfony/css-selector": "~4.*",
-        "symfony/dom-crawler": "~4.*",
+        "illuminate/support": "5.*",
+        "illuminate/view": "5.*",
+        "symfony/css-selector": "4.*",
+        "symfony/dom-crawler": "4.*",
         "tijsverkoyen/css-to-inline-styles": "^2.2"
     },
     "require-dev": {
