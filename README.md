@@ -2,7 +2,7 @@
 
 ![Laravel Blinky](http://api.devbar.ultrabold.de/github?text=Laravel%20Blinky)
 
-**Inky-Compiler for Laravel blade-files **
+**Inky-Compiler for Laravel blade-files**
 
 Package based on [Laravel Inky](https://github.com/petecoop/laravel-inky) created by [petecoop](https://github.com/petecoop)
 
