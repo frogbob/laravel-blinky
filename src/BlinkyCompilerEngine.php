@@ -1,6 +1,6 @@
 <?php
 
-namespace Vanderb\LaravelBlinky;
+namespace Frogbob\LaravelBlinky;
 
 use Illuminate\View\Engines\CompilerEngine;
 use Illuminate\View\Compilers\CompilerInterface;
