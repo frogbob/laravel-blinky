@@ -1,5 +1,6 @@
 # Laravel Blinky
 
+![InkyPHP](http://api.devbar.ultrabold.de/github?text=InkyPHP)
 ![Laravel Blinky](http://api.devbar.ultrabold.de/github?text=Laravel Blinky)
 
 **Inky-Compiler for Laravel blade-files **
