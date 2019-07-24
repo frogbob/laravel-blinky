@@ -1,8 +1,16 @@
+# Laravel Blinky
+
+![Laravel Blinky](http://api.devbar.ultrabold.de/github?text=Laravel Blinky)
+
+**Inky-Compiler for Laravel blade-files **
+
 Package based on [Laravel Inky](https://github.com/petecoop/laravel-inky) created by [petecoop](https://github.com/petecoop)
 
-Sadly his Package was not updated for about 1 year and can not be installed on current Laravel Versions 5.5, 5.6 and 5.7.
+Unfortunately his Package seems to be abandoned and can not be installed on Laravel Versions >= 5.5.
 
 Allows you to use Foundation's [Inky](http://foundation.zurb.com/emails/docs/inky.html) email templates nicely in Laravel.
+
+It uses our [InkyPHP](https://github.com/frogbob/inky-php) to compile inky-language to its html-version.
 
 Any views with a `.inky.php` extension will be compiled with both Inky and Blade, allowing you to use both templating engines seamlessly together. CSS is automatically inlined so styles work in email clients that don't support external stylesheets.
 
