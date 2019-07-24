@@ -17,11 +17,6 @@
         "symfony/dom-crawler": "4.*",
         "tijsverkoyen/css-to-inline-styles": "^2.2"
     },
-    "require-dev": {
-        "graham-campbell/testbench": "^3.3",
-        "phpunit/phpunit": "~5.4",
-        "mockery/mockery": "^0.9.5"
-    },
     "autoload": {
         "psr-4": {
             "Frogbob\\LaravelBlinky\\": "src"
