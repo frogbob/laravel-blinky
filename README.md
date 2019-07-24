@@ -11,11 +11,12 @@ It uses our [InkyPHP](https://github.com/frogbob/inky-php) to compile inky-langu
 
 Any views with a `.inky.php` extension will be compiled with both Inky and Blade, allowing you to use both templating engines seamlessly together. CSS is automatically inlined so styles work in email clients that don't support external stylesheets.
 
-## Notes
+### Docs
 
-Package based on [Laravel Inky](https://github.com/petecoop/laravel-inky) created by [petecoop](https://github.com/petecoop)
-
-Unfortunately his Package seems to be abandoned and can not be installed on Laravel Versions >= 5.5.
+* [Installation](#installation)
+* [Usage and Examples](#usage-and-examples)
+* [Notes](#notes)
+* [License](#license)
 
 ## Installation
 
@@ -30,7 +31,7 @@ Once installed, you'll need to register the service provider. Open `config/app.p
 Vanderb\LaravelBlinky\BlinkyServiceProvider::class
 ```
 
-## Usage
+## Usage and Examples
 
 Check the [Foundation for Emails docs](http://foundation.zurb.com/emails/docs/index.html) for full usage on how to use Inky and Foundation for Emails CSS.
 
@@ -105,7 +106,13 @@ Just update add following settings to `config/views.php`:
 ```
 
 
+## Notes
 
-## Licence
+Package based on [Laravel Inky](https://github.com/petecoop/laravel-inky) created by [petecoop](https://github.com/petecoop)
 
-[MIT Licence](LICENCE)
+Unfortunately his Package seems to be abandoned and can not be installed on Laravel Versions >= 5.5.
+
+
+## License
+
+See the [LICENSE](LICENSE) file for license info (it's the MIT license).
