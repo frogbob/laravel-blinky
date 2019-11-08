@@ -11,8 +11,8 @@
     ],
     "require": {
         "frogbob/inky-php": "^0.0.1",
-        "illuminate/support": "5.*",
-        "illuminate/view": "5.*",
+        "illuminate/support": "5.*|6.*",
+        "illuminate/view": "5.*|6.*",
         "symfony/css-selector": "4.*",
         "symfony/dom-crawler": "4.*",
         "tijsverkoyen/css-to-inline-styles": "^2.2"
