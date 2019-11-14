@@ -22,13 +22,13 @@ Any views with a `.inky.php` extension will be compiled with both Inky and Blade
 
 Require with composer
 ```
-composer require vanderb/laravel-blinky
+composer require frogbob/laravel-blinky
 ```
 
 Once installed, you'll need to register the service provider. Open `config/app.php` and add to the `providers` key:
 
 ```
-Vanderb\LaravelBlinky\BlinkyServiceProvider::class
+Frogbob\LaravelBlinky\BlinkyServiceProvider::class
 ```
 
 ## Usage and Examples
